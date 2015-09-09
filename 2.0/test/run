@@ -6,7 +6,7 @@
 # IMAGE_NAME specifies a name of the candidate image used for testing.
 # The image has to be available before this script is executed.
 #
-IMAGE_NAME=${IMAGE_NAME-openshift/ruby-20-centos7-candidate}
+IMAGE_NAME=${IMAGE_NAME-deploydock/ruby-20-centos7-candidate}
 
 declare -a WEB_SERVERS=(db puma rack)
 #declare -a WEB_SERVERS=(db)
@@ -149,7 +149,7 @@ test_scl_usage() {
 }
 
 pushd ${test_dir}
-git clone git://github.com/openshift/ruby-hello-world
+git clone git://github.com/Meros-io/ruby-hello-world
 mv ruby-hello-world db-test-app
 popd
 

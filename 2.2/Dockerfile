@@ -1,9 +1,9 @@
-FROM openshift/base-centos7
+FROM deploydock/base-centos7
 
 # This image provides a Ruby 2.2 environment you can use to run your Ruby
 # applications.
 
-MAINTAINER SoftwareCollections.org <sclorg@redhat.com>
+MAINTAINER Eric Sites <eric@meros.io>
 
 EXPOSE 8080
 
@@ -11,8 +11,8 @@ ENV RUBY_VERSION 2.2
 
 LABEL io.k8s.description="Platform for building and running Ruby 2.2 applications" \
       io.k8s.display-name="Ruby 2.2" \
-      io.openshift.expose-services="8080:http" \
-      io.openshift.tags="builder,ruby,ruby22"
+      io.deploydock.expose-services="8080:http" \
+      io.deploydock.tags="builder,ruby,ruby22"
 
 RUN yum install -y \
     https://www.softwarecollections.org/en/scls/rhscl/v8314/epel-7-x86_64/download/rhscl-v8314-epel-7-x86_64.noarch.rpm \
